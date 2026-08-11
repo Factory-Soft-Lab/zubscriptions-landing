@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy policy — Zubscriptions</title>
+<meta name="description" content="What Zubscriptions collects, what never leaves your phone, and how to switch usage statistics off.">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/styles.css">
+<link rel="canonical" href="https://factory-soft-lab.github.io/zubscriptions-landing/en/privacy.html">
+<link rel="alternate" hreflang="es" href="https://factory-soft-lab.github.io/zubscriptions-landing/privacidad.html">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap bar">
+    <a class="brand" href="./"><img src="../assets/icon.svg" alt="">Zubscriptions</a>
+    <nav>
+      <a href="privacy.html" aria-current="page">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="support.html">Support</a>
+      <a class="lang" href="../privacidad.html" hreflang="es">ES</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap doc">
+
+    <span class="eyebrow">Legal</span>
+    <h1>Privacy policy</h1>
+    <p class="meta">
+      Effective 11 August 2026 · Applies to the Zubscriptions mobile app for iOS
+      and Android.
+    </p>
+
+    <p class="lede">
+      Zubscriptions has no user accounts and no server of our own. What you record
+      — what you pay, how much and when — stays inside the app, on your phone. This
+      document explains the one exception and how to switch it off.
+    </p>
+
+    <nav class="toc" aria-label="Contents">
+      <p>Contents</p>
+      <ol>
+        <li><a href="#controller">Who is responsible</a></li>
+        <li><a href="#not-collected">What we don't collect</a></li>
+        <li><a href="#on-device">What stays on your phone</a></li>
+        <li><a href="#sent">What is sent</a></li>
+        <li><a href="#opt-out">How to switch it off</a></li>
+        <li><a href="#third-parties">Who it's shared with</a></li>
+        <li><a href="#retention">How long it's kept</a></li>
+        <li><a href="#purchases">In-app purchases</a></li>
+        <li><a href="#export">Export and import</a></li>
+        <li><a href="#notifications">Notifications</a></li>
+        <li><a href="#children">Children</a></li>
+        <li><a href="#rights">Your rights</a></li>
+        <li><a href="#delete">How to delete everything</a></li>
+        <li><a href="#changes">Changes</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ol>
+    </nav>
+
+    <section id="controller">
+      <h2>1. Who is responsible for this data</h2>
+      <p>
+        The data controller is <strong>Factory Soft Lab S.A.S.</strong>, a company
+        domiciled in Colombia and the developer of Zubscriptions. Anything related
+        to this policy is handled at
+        <a href="mailto:support@fabtorysoftlab.com">support@fabtorysoftlab.com</a>.
+      </p>
+    </section>
+
+    <section id="not-collected">
+      <h2>2. What we don't collect</h2>
+      <p>To get this out of the way first, Zubscriptions does <strong>not</strong>:</p>
+      <ul>
+        <li>ask for sign-up, email, phone number or password — there are no user accounts;</li>
+        <li>connect to your bank or to the services you pay for, and never reads transactions;</li>
+        <li>store card numbers: the "payment method" is just a label you type;</li>
+        <li>access your location, camera, microphone, contacts, photos or calendar;</li>
+        <li>show ads or use advertising identifiers (no IDFA, no iOS tracking prompt);</li>
+        <li>sell, rent or hand your data to anyone.</li>
+      </ul>
+    </section>
+
+    <section id="on-device">
+      <h2>3. What stays on your phone</h2>
+      <p>
+        Everything you record in the app is stored in a local database, in the
+        private space the operating system reserves for Zubscriptions: service
+        names, amounts, currencies, billing cycles, dates, categories, notes,
+        benefits, participants in a shared subscription and your preferences.
+      </p>
+      <p>
+        <strong>None of it is transmitted.</strong> There is no cloud copy, no
+        sync between devices, and no way for us to see it. If the phone is lost or
+        you uninstall the app, that data goes with it — which is why the export
+        exists (section&nbsp;9).
+      </p>
+    </section>
+
+    <section id="sent">
+      <h2>4. What is sent</h2>
+      <p>
+        The only information that leaves the device is <strong>usage statistics and
+        crash reports</strong>, processed with Firebase Analytics and Firebase
+        Crashlytics (Google). They tell us what gets used and what breaks.
+      </p>
+
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr><th>What is sent</th><th>Example</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Screens opened</td>
+              <td><code>screen_view</code> with a fixed name from a closed list: <code>home</code>, <code>dashboard</code>, <code>settings</code>…</td>
+            </tr>
+            <tr>
+              <td>Buttons tapped</td>
+              <td><code>button_tap</code> with the screen and the button name, also from a closed list</td>
+            </tr>
+            <tr>
+              <td>Actions in the app, without their content</td>
+              <td>that a subscription was created, paused or archived; that an export or import happened; that the purchase screen was viewed</td>
+            </tr>
+            <tr>
+              <td>How many subscriptions you have, in bands</td>
+              <td><code>4_7</code>, <code>8_15</code>, <code>31_PLUS</code> — never the exact figure</td>
+            </tr>
+            <tr>
+              <td>Technical crash data</td>
+              <td>device model, OS version, app version and the error trace</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="note">
+        <strong>What these events never carry:</strong> a service name, an amount, a
+        date, a note, a participant, or any text you typed. The app also assigns no
+        user identifier and no profile attributes. An event says "a subscription was
+        created", never "Netflix was created for 44,900 on the 3rd".
+      </p>
+
+      <p>
+        Firebase assigns an installation identifier to the device and records the
+        approximate country inferred from the IP address, as part of how the tool
+        normally works. That identifier resets if you uninstall the app or turn
+        statistics off.
+      </p>
+    </section>
+
+    <section id="opt-out">
+      <h2>5. How to switch it off</h2>
+      <p>
+        Under <strong>Settings → Privacy → Usage statistics</strong> there is a
+        single switch that turns off both the statistics and the crash reports. It
+        starts on; turning it off stops any sending immediately and it does not
+        resume until you turn it back on. The preference is stored on the phone and
+        read before Firebase starts, so off means off on the next launch too.
+      </p>
+      <p>You can use the whole app with the switch off. No feature is lost.</p>
+    </section>
+
+    <section id="third-parties">
+      <h2>6. Who it's shared with</h2>
+      <p>
+        Only with <strong>Google LLC</strong>, as the provider of Firebase Analytics
+        and Crashlytics, and only the data in section 4. Google processes it under
+        its own terms; see
+        <a href="https://firebase.google.com/support/privacy" rel="noopener">firebase.google.com/support/privacy</a>
+        and the
+        <a href="https://policies.google.com/privacy" rel="noopener">Google privacy policy</a>.
+      </p>
+      <p>
+        This means an <strong>international transfer</strong>: the information is
+        processed on Google servers outside Colombia, including in the United
+        States. Using the app with statistics enabled authorises that transfer; if
+        you would rather avoid it, switch them off.
+      </p>
+      <p>
+        We use no other third-party tooling: no ad networks, no maps, no additional
+        analytics SDKs.
+      </p>
+    </section>
+
+    <section id="retention">
+      <h2>7. How long it's kept</h2>
+      <ul>
+        <li><strong>What's on your phone:</strong> until you delete it or uninstall the app. It does not expire.</li>
+        <li><strong>Usage events:</strong> kept in Firebase for at most 14 months, per the retention period configured on the project.</li>
+        <li><strong>Crash reports:</strong> around 90 days, which is when Crashlytics discards them.</li>
+      </ul>
+    </section>
+
+    <section id="purchases">
+      <h2>8. In-app purchases</h2>
+      <p>
+        If you buy Zubscriptions Pro, the transaction is handled entirely by
+        <strong>Apple</strong> or <strong>Google</strong>, depending on the store. We
+        neither see nor receive your name, email, address or payment details: the app
+        only asks the operating system whether the purchase is active. Processing of
+        that data is the responsibility of the store you paid through.
+      </p>
+    </section>
+
+    <section id="export">
+      <h2>9. Export and import</h2>
+      <p>
+        The app can produce a file with all your subscriptions so you can back them
+        up or move them to another phone. <strong>You create that file and it goes
+        wherever you send it</strong> — email, messaging, whichever cloud you use —
+        and from that point it falls under the terms of the service you chose. We
+        receive no copy and play no part in that transfer.
+      </p>
+    </section>
+
+    <section id="notifications">
+      <h2>10. Notifications</h2>
+      <p>
+        Charge reminders are scheduled and fired <strong>on the phone itself</strong>.
+        No notification is sent from a server, so there is no external record of your
+        billing dates. If you don't grant notification permission, the rest of the app
+        works just the same.
+      </p>
+    </section>
+
+    <section id="children">
+      <h2>11. Children</h2>
+      <p>
+        Zubscriptions is not directed at children under 14 and does not knowingly
+        collect their data. If you believe a minor in your care has used the app and
+        want us to look into something, write to us.
+      </p>
+    </section>
+
+    <section id="rights">
+      <h2>12. Your rights</h2>
+      <p>
+        Under Colombian Law 1581 of 2012 and its implementing rules, you have the
+        right to know, update and correct your data, to request proof of your
+        authorisation, to be informed about its use, to file complaints with the
+        Superintendency of Industry and Commerce, to revoke your authorisation and to
+        request deletion.
+      </p>
+      <p>
+        In practice you exercise almost all of those yourself, without asking us for
+        anything: we don't hold data that identifies you, and what you record lives on
+        your phone, where you can view, correct, export or delete it at any time. For
+        the part that does depend on us — the usage events — write to
+        <a href="mailto:support@fabtorysoftlab.com">support@fabtorysoftlab.com</a>
+        and we'll respond within the statutory deadlines.
+      </p>
+    </section>
+
+    <section id="delete">
+      <h2>13. How to delete everything</h2>
+      <p>
+        <strong>Uninstalling the app removes all of your information</strong>, leaving
+        nothing of ours on any server: there is no account to close because there
+        never was one. Inside the app you can also archive or delete subscriptions one
+        by one. To stop us receiving usage events as well, turn off the switch in
+        section 5 before uninstalling.
+      </p>
+    </section>
+
+    <section id="changes">
+      <h2>14. Changes to this policy</h2>
+      <p>
+        If something relevant changes we'll update this page and the effective date in
+        the header. When the change affects what is collected, we'll also say so
+        inside the app before it takes effect.
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>15. Contact</h2>
+      <p>
+        Factory Soft Lab S.A.S. · Colombia<br>
+        <a href="mailto:support@fabtorysoftlab.com">support@fabtorysoftlab.com</a>
+      </p>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Factory Soft Lab S.A.S. · Colombia</span>
+    <nav>
+      <a href="./">Home</a>
+      <a href="terms.html">Terms</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>

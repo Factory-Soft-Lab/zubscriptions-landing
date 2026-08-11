@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <!--
+    Icono de Zubs — «cartas apiladas».
+
+    Tres tarjetas de suscripcion en abanico: lo que la app ordena es una pila de
+    cosas que pagas. Los tres tonos son la marca misma —cian, indigo y purpura—,
+    con una fila (punto + linea) marcada en la tarjeta de delante para que se lea
+    como un elemento de lista.
+
+    A sangre y totalmente opaco: iOS aplica su propia mascara y rechaza el canal
+    alfa, y el launcher legacy de Android espera un mapa de bits cuadrado. Las
+    tarjetas llenan el cuadro con margenes generosos y esquinas ya redondeadas
+    (rx 46-50), asi que la mascara de plataforma solo redondea un canto que ya
+    lo esta. El suelo #08070F es el mismo violeta casi negro de la interfaz: al
+    abrir la app no hay salto entre icono y pantalla.
+  -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#171430"/>
+      <stop offset="1" stop-color="#08070F"/>
+    </linearGradient>
+    <linearGradient id="c1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7CE0FF"/>
+      <stop offset="1" stop-color="#64D2FF"/>
+    </linearGradient>
+    <linearGradient id="c2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8280F0"/>
+      <stop offset="1" stop-color="#5E5CE6"/>
+    </linearGradient>
+    <linearGradient id="c3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#D084F5"/>
+      <stop offset="1" stop-color="#BF5AF2"/>
+    </linearGradient>
+    <filter id="lift" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.42"/>
+    </filter>
+  </defs>
+
+  <!-- Suelo a sangre, opaco. -->
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+
+  <!-- Abanico de tarjetas, llenando el cuadro. -->
+  <g filter="url(#lift)">
+    <!-- Detras: purpura. -->
+    <rect x="232" y="254" width="560" height="252" rx="46" fill="url(#c3)"
+          transform="rotate(-8 512 380)"/>
+    <!-- Medio: indigo. -->
+    <rect x="212" y="370" width="600" height="264" rx="48" fill="url(#c2)"
+          transform="rotate(-2 512 502)"/>
+    <!-- Delante: cian, con la fila de lista. -->
+    <g transform="rotate(4 512 624)">
+      <rect x="203" y="486" width="618" height="276" rx="50" fill="url(#c1)"/>
+      <circle cx="311" cy="620" r="37" fill="#04222E" fill-opacity="0.55"/>
+      <rect x="396" y="601" width="325" height="35" rx="17" fill="#04222E" fill-opacity="0.45"/>
+    </g>
+  </g>
+</svg>
