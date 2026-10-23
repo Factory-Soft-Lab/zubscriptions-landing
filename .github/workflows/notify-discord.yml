@@ -1,0 +1,46 @@
+name: Notify Discord on PR
+
+# Avisa a Discord cuando se abre, reabre, mergea o cierra un PR.
+# Secreto: DISCORD_WEBHOOK_URL (repo u organización). Si no está, el job termina sin error.
+# Plantilla: fabtory-infrastructure/standards/templates/workflows/notify-discord.yml
+
+on:
+  pull_request:
+    types: [opened, reopened, ready_for_review, closed]
+
+permissions:
+  contents: read
+
+jobs:
+  notify:
+    if: github.event.pull_request.draft == false
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Send to Discord
+        env:
+          REPO: ${{ github.event.repository.name }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          PR_AUTHOR: ${{ github.event.pull_request.user.login }}
+          PR_ACTION: ${{ github.event.action }}
+          PR_MERGED: ${{ github.event.pull_request.merged }}
+          PR_BASE: ${{ github.event.pull_request.base.ref }}
+          WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: |
+          if [ -z "$WEBHOOK" ]; then
+            echo "DISCORD_WEBHOOK_URL no configurado: no se envía aviso."
+            exit 0
+          fi
+          if [ "$PR_ACTION" = "closed" ] && [ "$PR_MERGED" = "true" ]; then
+            STATUS="mergeado en $PR_BASE"
+          elif [ "$PR_ACTION" = "closed" ]; then
+            STATUS="cerrado sin merge"
+          else
+            STATUS="abierto hacia $PR_BASE"
+          fi
+          payload=$(jq -n --arg content "**[$REPO] PR #$PR_NUMBER $STATUS** por @$PR_AUTHOR
+          > $PR_TITLE
+          $PR_URL" '{content: $content}')
+          curl -sS -H "Content-Type: application/json" -X POST "$WEBHOOK" -d "$payload"

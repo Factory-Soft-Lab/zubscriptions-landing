@@ -1,0 +1,9 @@
+# Dependabot: actualizaciones semanales agrupadas.
+# Plantilla: fabtory-infrastructure/standards/templates/dependabot/dependabot.yml
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule: { interval: weekly }
+    groups:
+      actions: { patterns: ['*'] }
