@@ -3,7 +3,7 @@
 Sitio público de **Zubscriptions**: la portada y los tres documentos que exigen
 App Store y Google Play —privacidad, términos y soporte—, en español e inglés.
 
-🔗 https://factory-soft-lab.github.io/zubscriptions-landing/
+🔗 https://zubscriptions.factorysoftlab.com/
 
 ## Por qué vive en un repo aparte
 
