@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zubscriptions.factorysoftlab.com/sitemap.xml
