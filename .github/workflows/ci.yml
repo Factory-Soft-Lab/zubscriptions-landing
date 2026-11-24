@@ -1,0 +1,31 @@
+name: CI
+
+# Sitio estático servido por GitHub Pages desde main (sin build ni rama de despliegue: ver docs/adr/0001-ci-homologado.md).
+# Verificación informativa: enlaces internos relativos existentes. No bloquea fusionar.
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  enlaces:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Enlaces internos existen
+        run: |
+          fail=0
+          while IFS= read -r f; do
+            dir=$(dirname "$f")
+            while IFS= read -r l; do
+              case "$l" in ''|/*|mailto*|http*) continue ;; esac
+              if [ ! -e "$dir/$l" ]; then echo "::error file=$f::enlace roto: $l"; fail=1; fi
+            done < <(grep -oE '(href|src)="[^"#:?]+"' "$f" | sed -E 's/^[a-z]+="//; s/"$//')
+          done < <(git ls-files '*.html')
+          exit $fail
