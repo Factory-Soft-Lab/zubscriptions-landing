@@ -5,136 +5,140 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Zubscriptions — tus suscripciones, en tu teléfono y en ningún otro sitio</title>
 <meta name="description" content="Zubscriptions lleva la cuenta de lo que pagas cada mes: avisos antes del cobro, totales reales y gasto por categoría. Sin cuentas y sin servidor: tus datos viven en tu teléfono.">
+<meta name="theme-color" content="#08070f" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f7f6fc" media="(prefers-color-scheme: light)">
+<script>try{var m=localStorage.getItem('zub-theme');if(m==='light'||m==='dark')document.documentElement.classList.add(m)}catch(e){}document.documentElement.classList.add('js')</script>
 <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="assets/styles.css">
+<link rel="stylesheet" href="assets/landing.css">
+<link rel="preload" as="image" href="assets/img/inicio.webp" type="image/webp">
 <link rel="canonical" href="https://zubscriptions.factorysoftlab.com/">
 <link rel="alternate" hreflang="es" href="https://zubscriptions.factorysoftlab.com/">
 <link rel="alternate" hreflang="en" href="https://zubscriptions.factorysoftlab.com/en/">
-<meta property="og:title" content="Zubscriptions">
-<meta property="og:description" content="Tus suscripciones, en tu teléfono y en ningún otro sitio.">
+<link rel="alternate" hreflang="x-default" href="https://zubscriptions.factorysoftlab.com/">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="Zubscriptions">
+<meta property="og:title" content="Zubscriptions — todas tus suscripciones en un solo lugar">
+<meta property="og:description" content="Sabe cuánto pagas y cuándo te cobran. Sin cuentas y sin servidor.">
+<meta property="og:url" content="https://zubscriptions.factorysoftlab.com/">
+<meta property="og:locale" content="es_CO">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:image" content="https://zubscriptions.factorysoftlab.com/assets/img/og.jpg">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="500">
+<meta property="og:image:alt" content="Zubscriptions: pantallas de la app con el total del mes y el panel de gasto">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Zubscriptions", "operatingSystem": "iOS, Android", "applicationCategory": "FinanceApplication", "inLanguage": "es", "description": "Zubscriptions lleva la cuenta de lo que pagas cada mes: avisos antes del cobro, totales reales y gasto por categoría. Sin cuentas y sin servidor: tus datos viven en tu teléfono.", "url": "https://zubscriptions.factorysoftlab.com/", "image": "https://zubscriptions.factorysoftlab.com/assets/img/og.jpg", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "Factory Soft Lab S.A.S.", "url": "https://factorysoftlab.com/"}}</script>
 </head>
 <body>
-
+<a class="skip" href="#main">Saltar al contenido</a>
 <header class="topbar">
   <div class="wrap bar">
-    <a class="brand" href="./"><img src="assets/icon.svg" alt="">Zubscriptions</a>
-    <nav>
-      <a href="privacidad.html">Privacidad</a>
-      <a href="terminos.html">Términos</a>
+    <a class="brand" href="./"><img src="assets/icon.svg" alt="" width="32" height="32">Zubscriptions</a>
+    <nav aria-label="Principal">
+      <a class="hide-sm" href="#avisos">Funciones</a>
+      <a class="hide-sm" href="#privacidad">Privacidad</a>
+      <a class="hide-sm" href="#precio">Precio</a>
       <a href="soporte.html">Soporte</a>
-      <a class="lang" href="en/" hreflang="en">EN</a>
+      <a class="lang" href="en/" hreflang="en" lang="en">EN</a>
+      <button class="icon-btn theme-toggle" type="button" aria-label="Cambiar entre modo claro y oscuro" aria-pressed="false"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
     </nav>
   </div>
 </header>
 
-<main>
+<main id="main">
+<section class="hero">
   <div class="wrap">
-
-    <section class="hero">
-      <div>
-        <span class="eyebrow">iPhone y Android</span>
-        <h1>Tus suscripciones, en tu teléfono y en ningún otro sitio.</h1>
-        <p class="lede">
-          Zubscriptions lleva la cuenta de todo lo que se te renueva: cuánto es,
-          cuándo cae y qué parte te toca. Sin crear una cuenta, sin conectar el
-          banco y sin subir nada a ningún servidor.
-        </p>
-        <p class="pill"><span class="dot"></span>En pruebas cerradas · pronto en App Store y Google Play</p>
-      </div>
-      <div class="hero-art">
-        <img src="assets/icon.svg" alt="Icono de Zubscriptions: tres tarjetas de suscripción apiladas en abanico">
-      </div>
-    </section>
-
-    <h2>Qué hace</h2>
-    <ul class="cards">
-
-      <li class="card">
-        <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M18 8A6 6 0 1 0 6 8c0 5-2 6-2 6h16s-2-1-2-6"/><path d="M10.5 19a2 2 0 0 0 3 0"/>
-        </svg>
-        <h3>Te avisa antes, no después</h3>
-        <p>Un recordatorio 7, 3 o 1 día antes del cobro —o los días que tú digas—, para cada suscripción por separado. El aviso llega a tiempo de cancelar.</p>
-      </li>
-
-      <li class="card">
-        <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M4 19V9"/><path d="M10 19V5"/><path d="M16 19v-7"/><path d="M3 21h18"/>
-        </svg>
-        <h3>El total de verdad</h3>
-        <p>Lo anual repartido, lo semanal sumado: todo convertido al mismo periodo para que veas qué te cuesta al día, a la semana, al mes o al año.</p>
-      </li>
-
-      <li class="card">
-        <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <circle cx="12" cy="12" r="8.25"/><path d="M12 3.75V12l5.8 5.8"/>
-        </svg>
-        <h3>En qué se te va</h3>
-        <p>Gasto por categoría, tendencia mes a mes, calendario de cobros y el ranking de lo que más te cuesta.</p>
-      </li>
-
-      <li class="card">
-        <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M9 21V3"/><rect x="3.25" y="3" width="17.5" height="18" rx="3"/>
-        </svg>
-        <h3>Personal y de la empresa, separados</h3>
-        <p>Marca cada suscripción como personal o de trabajo y mira las cuentas por separado cuando lo necesites.</p>
-      </li>
-
-      <li class="card">
-        <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <circle cx="8.5" cy="8" r="3.25"/><path d="M3 20a5.5 5.5 0 0 1 11 0"/><path d="M16 5.2a3.25 3.25 0 0 1 0 5.6"/><path d="M18 15.2A5.5 5.5 0 0 1 21 20"/>
-        </svg>
-        <h3>Lo que compartes, repartido</h3>
-        <p>El Netflix de la casa dividido entre cuatro: apunta con quién va y cuánto pones tú, y los totales cuentan sólo tu parte.</p>
-      </li>
-
-      <li class="card">
-        <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M12 15V3"/><path d="M8 7l4-4 4 4"/><path d="M4 15v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4"/>
-        </svg>
-        <h3>Tus datos se van contigo</h3>
-        <p>Exporta todo a un archivo cuando quieras y vuélvelo a importar en otro teléfono. Sin ataduras y sin pedir permiso a nadie.</p>
-      </li>
-
-    </ul>
-
-    <section class="claim">
-      <h2>Lo que sí sale y lo que no</h2>
-      <p>
-        <strong>Tus suscripciones —nombres, montos, fechas, notas— nunca salen del
-        teléfono.</strong> No hay cuentas, no hay servidor y no hay copia en la nube:
-        todo se guarda en una base de datos local dentro de la app.
-      </p>
-      <p>
-        Lo único que se envía son <strong>estadísticas de uso anónimas</strong> —qué
-        pantallas se abren, qué botones se pulsan— y los informes de fallos, para
-        saber qué arreglar. No llevan tu identidad ni el contenido de tus
-        suscripciones, y <strong>se pueden apagar</strong> en Ajustes.
-      </p>
-      <p class="meta">
-        Está contado con detalle, sin letra pequeña, en la
-        <a href="privacidad.html">política de privacidad</a>.
-      </p>
-    </section>
-
-    <h2>Gratis, y con una compra opcional</h2>
-    <p>
-      Las primeras <strong>7 suscripciones son gratis</strong>, con avisos y totales
-      incluidos. Si necesitas más, Zubscriptions Pro se compra una vez —o por
-      trimestres— y quita el tope. No hay publicidad, ni venta de datos, ni
-      suscripción escondida: el precio exacto lo verás dentro de la app antes de
-      pagar nada.
-    </p>
-
+    <div>
+      <span class="eyebrow">iPhone y Android</span>
+      <h1>Todas tus suscripciones, <em>en un solo lugar.</em></h1>
+      <p class="lede">Sabe cuánto pagas y cuándo te cobran. Zubscriptions lleva la cuenta de todo lo que se te renueva, sin crear una cuenta, sin conectar el banco y sin subir nada a ningún servidor.</p>
+      <div class="stores"><span class="store" role="img" aria-disabled="true" aria-label="Muy pronto en App Store"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.87-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.6 1.1 8.76.73 1.06 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.41 1.2-2.47-.03-.01-2.3-.88-2.32-3.52zM14.2 6.13c.6-.74 1.01-1.75.9-2.77-.87.04-1.93.58-2.55 1.31-.56.65-1.05 1.69-.92 2.68.97.08 1.96-.49 2.57-1.22z"/></svg><span><small>Muy pronto en</small><strong>App Store</strong></span></span><span class="store" role="img" aria-disabled="true" aria-label="Muy pronto en Google Play"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00d7fe" d="M3.6 2.3 13.5 12l-9.9 9.7c-.35-.2-.6-.6-.6-1.1V3.4c0-.5.25-.9.6-1.1z"/><path fill="#ffce00" d="m17 8.6 3.2 1.8c.95.55.95 2.65 0 3.2L17 15.4 13.5 12z"/><path fill="#ff3a44" d="M17 15.4 13.5 12l-9.9 9.7c.37.2.85.2 1.3-.05z"/><path fill="#00f076" d="M4.9 2.35 17 8.6 13.5 12 3.6 2.3c.37-.2.85-.2 1.3.05z"/></svg><span><small>Muy pronto en</small><strong>Google Play</strong></span></span></div>
+      <p class="pill"><span class="dot"></span>En pruebas cerradas · pronto en App Store y Google Play</p>
+    </div>
+    <div class="phones" aria-label="Pantallas de la app" role="group">
+      <div class="phone p-left"><picture><source srcset="assets/img/panel.webp" type="image/webp"><img src="assets/img/panel.jpg" width="508" height="1104" alt="Panel: gasto por categoría, lo que viene en 12 meses y calendario de cobros" loading="lazy" decoding="async"></picture></div>
+      <div class="phone p-main"><picture><source srcset="assets/img/inicio.webp" type="image/webp"><img src="assets/img/inicio.jpg" width="508" height="1104" alt="Pantalla de inicio: 606.167 pesos este mes, próximo cobro Familia TV en 2 días" fetchpriority="high"></picture></div>
+      <div class="phone p-right"><picture><source srcset="assets/img/detalle.webp" type="image/webp"><img src="assets/img/detalle.jpg" width="508" height="1104" alt="Detalle de una suscripción: costo mensual, anual y cuánto llevas pagado" loading="lazy" decoding="async"></picture></div>
+      <div class="notif" aria-hidden="true"><img src="assets/icon.svg" alt="" width="36" height="36"><div><strong>Familia TV se cobra mañana</strong><span>$ 15.900 · aún estás a tiempo de cancelar</span></div></div>
+    </div>
   </div>
+</section>
+
+<section class="section" id="avisos">
+  <div class="wrap feature">
+    <div class="copy reveal">
+      <span class="eyebrow">Recordatorios</span>
+      <h2>Te avisa antes del cobro, no después.</h2>
+      <p class="lead">Un recordatorio 7, 3 o 1 día antes —o los días que tú digas—, para cada suscripción por separado y a la hora que elijas.</p>
+      <ul class="ticks"><li>Avisos por suscripción, no uno general</li><li>Tú eliges los días y la hora</li><li>Llega a tiempo de cancelar</li></ul>
+    </div>
+    <div class="shot reveal"><div class="phone"><picture><source srcset="assets/img/recordatorios.webp" type="image/webp"><img src="assets/img/recordatorios.jpg" width="508" height="1104" alt="Pantalla de recordatorios con los avisos activos de cada suscripción" loading="lazy" decoding="async"></picture></div></div>
+  </div>
+</section>
+<section class="section" id="detalle">
+  <div class="wrap feature flip">
+    <div class="copy reveal">
+      <span class="eyebrow">Cada suscripción</span>
+      <h2>Cada suscripción, al detalle.</h2>
+      <p class="lead">Lo anual repartido, lo semanal sumado: todo convertido al mismo periodo para que veas qué te cuesta de verdad.</p>
+      <ul class="ticks"><li>Costo mensual y anual</li><li>Cuánto llevas pagado desde que empezó</li><li>Qué incluye cada plan y si es personal o de trabajo</li></ul>
+    </div>
+    <div class="shot reveal"><div class="phone"><picture><source srcset="assets/img/detalle.webp" type="image/webp"><img src="assets/img/detalle.jpg" width="508" height="1104" alt="Detalle de Compras Plus: 16.900 al mes, 202.800 al año, 118.300 pagado ya" loading="lazy" decoding="async"></picture></div></div>
+  </div>
+</section>
+<section class="section" id="panel">
+  <div class="wrap feature">
+    <div class="copy reveal">
+      <span class="eyebrow">Panel</span>
+      <h2>Entiende en qué se te va.</h2>
+      <p class="lead">Gasto por categoría, lo que viene en los próximos 12 meses y un calendario con cada cobro marcado.</p>
+      <ul class="ticks"><li>Gasto por categoría</li><li>Calendario de cobros</li><li>Vista a 3, 6 y 12 meses</li></ul>
+    </div>
+    <div class="shot reveal"><div class="phone"><picture><source srcset="assets/img/panel.webp" type="image/webp"><img src="assets/img/panel.jpg" width="508" height="1104" alt="Panel con gráfico por categoría, barras de los próximos 12 meses y calendario" loading="lazy" decoding="async"></picture></div></div>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal"><span class="eyebrow">Y además</span><h2>Lo que hace la diferencia.</h2><p class="lead">Pensado para cómo se pagan de verdad las suscripciones: compartidas, de trabajo y con prueba gratis.</p></div>
+    <ul class="cards"><li class="card reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8A6 6 0 1 0 6 8c0 5-2 6-2 6h16s-2-1-2-6"/><path d="M10.5 19a2 2 0 0 0 3 0"/></svg><h3>Pruebas gratis vigiladas</h3><p>Las pruebas gratis quedan marcadas para que el primer cobro no te tome por sorpresa.</p></li><li class="card reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21V3"/><rect x="3.25" y="3" width="17.5" height="18" rx="3"/></svg><h3>Personal y de la empresa</h3><p>Marca cada suscripción como personal o de trabajo y mira las cuentas por separado.</p></li><li class="card reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8.5" cy="8" r="3.25"/><path d="M3 20a5.5 5.5 0 0 1 11 0"/><path d="M16 5.2a3.25 3.25 0 0 1 0 5.6"/><path d="M18 15.2A5.5 5.5 0 0 1 21 20"/></svg><h3>Lo compartido, repartido</h3><p>El Netflix de la casa entre cuatro: los totales cuentan sólo tu parte.</p></li><li class="card reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19V9"/><path d="M10 19V5"/><path d="M16 19v-7"/><path d="M3 21h18"/></svg><h3>El ranking de lo caro</h3><p>Ve de un vistazo qué suscripciones se llevan más de tu dinero.</p></li><li class="card reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3"/><path d="M8 7l4-4 4 4"/><path d="M4 15v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4"/></svg><h3>Tus datos se van contigo</h3><p>Exporta todo a un archivo y vuélvelo a importar en otro teléfono.</p></li><li class="card reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10.5" width="16" height="10.5" rx="2.5"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/></svg><h3>Sin cuentas ni servidor</h3><p>Nada que registrar: todo vive en una base de datos local dentro de la app.</p></li></ul>
+  </div>
+</section>
+
+<section class="section" id="privacidad">
+  <div class="wrap">
+    <div class="claim reveal">
+      <span class="eyebrow">Privacidad</span>
+      <h2 style="font-size:clamp(30px,4vw,44px);margin:12px 0 16px">Lo que sí sale del teléfono y lo que no.</h2>
+      <p><strong>Tus suscripciones —nombres, montos, fechas, notas— nunca salen del teléfono.</strong> No hay cuentas, no hay servidor y no hay copia en la nube.</p><p>Lo único que se envía son <strong>estadísticas de uso anónimas</strong> y los informes de fallos, para saber qué arreglar. No llevan tu identidad ni el contenido de tus suscripciones, y <strong>se pueden apagar</strong> en Ajustes.</p>
+      <p><a href="privacidad.html">Léelo sin letra pequeña en la política de privacidad →</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="precio">
+  <div class="wrap">
+    <div class="section-head reveal"><span class="eyebrow">Precio</span><h2>Gratis, y con una compra opcional.</h2><p class="lead">Sin publicidad, sin venta de datos y sin suscripción escondida: el precio exacto lo verás dentro de la app antes de pagar nada.</p></div>
+    <div class="price">
+      <div class="plan reveal"><h3>Gratis</h3><p>Las primeras 7 suscripciones, con avisos y totales incluidos.</p></div>
+      <div class="plan pro reveal"><h3>Zubscriptions Pro</h3><p>Se compra una vez —o por trimestres— y quita el tope de suscripciones.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section cta">
+  <div class="wrap reveal">
+    <img src="assets/icon.svg" alt="" width="88" height="88" loading="lazy">
+    <h2 style="font-size:clamp(30px,4vw,44px);margin:0 0 14px">Toma el control de tus suscripciones.</h2>
+    <p class="lead" style="color:var(--ink-muted);max-width:36em">Zubscriptions está en pruebas cerradas y llega pronto a App Store y Google Play.</p>
+    <div class="stores"><span class="store" role="img" aria-disabled="true" aria-label="Muy pronto en App Store"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.87-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.6 1.1 8.76.73 1.06 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.41 1.2-2.47-.03-.01-2.3-.88-2.32-3.52zM14.2 6.13c.6-.74 1.01-1.75.9-2.77-.87.04-1.93.58-2.55 1.31-.56.65-1.05 1.69-.92 2.68.97.08 1.96-.49 2.57-1.22z"/></svg><span><small>Muy pronto en</small><strong>App Store</strong></span></span><span class="store" role="img" aria-disabled="true" aria-label="Muy pronto en Google Play"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00d7fe" d="M3.6 2.3 13.5 12l-9.9 9.7c-.35-.2-.6-.6-.6-1.1V3.4c0-.5.25-.9.6-1.1z"/><path fill="#ffce00" d="m17 8.6 3.2 1.8c.95.55.95 2.65 0 3.2L17 15.4 13.5 12z"/><path fill="#ff3a44" d="M17 15.4 13.5 12l-9.9 9.7c.37.2.85.2 1.3-.05z"/><path fill="#00f076" d="M4.9 2.35 17 8.6 13.5 12 3.6 2.3c.37-.2.85-.2 1.3.05z"/></svg><span><small>Muy pronto en</small><strong>Google Play</strong></span></span></div>
+  </div>
+</section>
 </main>
 
 <footer>
   <div class="wrap">
     <span>© 2026 Factory Soft Lab S.A.S. · Colombia</span>
-    <nav>
+    <nav aria-label="Legal">
       <a href="privacidad.html">Privacidad</a>
       <a href="terminos.html">Términos</a>
       <a href="soporte.html">Soporte</a>
@@ -142,6 +146,6 @@
     </nav>
   </div>
 </footer>
-
+<script src="assets/landing.js" defer></script>
 </body>
 </html>
